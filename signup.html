@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogAdda | Signup</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/backend.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jqueryCode.js"></script>
+    <style>
+        #header {
+            position: relative;
+        }
+
+        #footer {
+            min-width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header section -->
+    <section id="header" style="position:sticky;">
+        <div>
+            <h1>BlogAdda</h1>
+        </div>
+        <div class="menu">
+            <span id="toggleBtn">&#9776;</span>
+            <ul id="toggleMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="login.html">Blogs</a></li>
+                <li><a href="#contactUs">Contact</a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- end header -->
+    <section id="signup">
+        <div class="d-flex" style="height: 100%;width: 90%;margin: auto;padding: 3%;">
+            <div class="flex-4 none">
+                <div class="leftSignupDiv">
+                    <div>
+                        <p>Already have an account ?</p>
+                        <a href="login.html" class="btn-primary"
+                            style="text-align: center;padding-left: 5%;padding-right: 5%;line-height: 50px;">Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-8">
+                <div class="rightSignupDiv">
+                    <div>
+                        <h1>SIGNUP</h1>
+                    </div>
+                    <form onsubmit="return signup_validation()">
+                        <div style="padding: 1%;">
+                            <div class="d-flex d-block" style="padding: 1%;">
+                                <div class="flex-4" style="padding: 1%;">
+                                    <label for="">First Name</label><br>
+                                    <input type="text" placeholder="first name" id="fname" autocomplete="off"
+                                        onkeypress="f_valid(this)">
+                                    <small id="f_error"></small>
+                                </div>
+                                <div class="flex-4" style="padding: 1%;">
+                                    <label for="">Last Name</label><br>
+                                    <input type="text" placeholder="last name" id="lname" autocomplete="off"
+                                        onkeypress="l_valid(this)">
+                                    <small id="l_error"></small>
+                                </div>
+                                <div class="flex-4" style="padding: 1%;">
+                                    <label for="">E-Mail</label><br>
+                                    <input type="text" placeholder="email" id="email" autocomplete="off"
+                                        onkeypress="email_valid(this)">
+                                    <small id="e_error"></small>
+                                </div>
+                            </div>
+                            <div class="d-flex d-block" style="padding: 1%;">
+                                <div class="flex-6" style="padding: 1%;">
+                                    <label for="">Password</label><br>
+                                    <input type="text" placeholder="password" id="password" autocomplete="off"
+                                        onkeypress="pswd_valid(this)">
+                                    <small id="p_error"></small>
+                                </div>
+                                <div class="flex-6" style="padding: 1%;">
+                                    <label for="">Confirm Password</label><br>
+                                    <input type="text" placeholder="confirm password" id="cpassword" autocomplete="off"
+                                        onkeypress="cpswd_valid(this)">
+                                    <small id="cp_error"></small>
+                                </div>
+                            </div>
+                            <div class="d-flex d-block" style="padding: 1%;">
+                                <div class="flex-4" style="padding: 1%;">
+                                    <label for="">Country</label><br>
+                                    <input type="text" placeholder="country" id="country" autocomplete="off"
+                                        onkeypress="correct_msg()">
+                                    <small id="cn_error"></small>
+                                </div>
+                                <div class="flex-4" style="padding: 1%;">
+                                    <label for="">State</label><br>
+                                    <input type="text" placeholder="state" id="state" autocomplete="off"
+                                        onkeypress="correct_msg()">
+                                    <small id="s_error"></small>
+                                </div>
+                                <div class="flex-4" style="padding: 1%;">
+                                    <label for="">Pincode</label><br>
+                                    <input type="text" name="" id="pincode" autocomplete="off"
+                                        onkeypress="correct_msg()">
+                                    <small id="pin_error"></small>
+                                </div>
+                            </div>
+                            <div style="padding: 1%;">
+                                <div style="padding: 1%;">
+                                    <label for="">Address</label><br>
+                                    <textarea name="" cols="30" rows="10" placeholder="address" autocomplete="off"
+                                        id="address" onkeypress="correct_msg()"></textarea>
+                                    <small id="adrs_error"></small>
+                                </div>
+                            </div>
+                            <div style="padding: 1%;text-align: center;">
+                                <input type="submit" value="submit" class="btn-danger">
+                            </div>
+                            <div class="linkLogin">
+                                Already hav an account?
+                                <a href="login.html">login here</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end signup section -->
+
+    <!-- footer section -->
+    <section id="footer">
+        <div>
+            <img src="images/icon/Screenshot (8).png" alt="">
+        </div>
+        <div>
+            <h1>Quick Links</h1>
+        </div>
+        <div class="d-flex center">
+            <div>
+                <a href="#">
+                    <img src="images/icon/gmail.png" alt="" class="socialIcons flex-2">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="images/icon/facebook.png" alt="" class="socialIcons flex-2">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="images/icon/instagram.png" alt="" class="socialIcons flex-2">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="images/icon/youtube.png" alt="" class="socialIcons flex-2">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="images/icon/twitter.png" alt="" class="socialIcons flex-2">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="images/icon/whatsapp.png" alt="" class="socialIcons flex-2">
+                </a>
+            </div>
+        </div>
+        <div>
+            <p>All rights 2021 are reserved &copy; | BlogAdda Inc</p>
+        </div>
+    </section>
+    <!-- end footer -->
+</body>
+
+</html>
